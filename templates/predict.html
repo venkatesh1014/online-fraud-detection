@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Predict</title>
+    <style>
+        body { background-color: #add8e6; font-family: Arial, sans-serif; padding: 20px; }
+        form { background-color: white; width: 400px; margin: auto; padding: 20px; border-radius: 10px; }
+        input { width: 95%; padding: 10px; margin: 10px 0; border: 1px solid #ccc; border-radius: 5px; }
+        button { background-color: #4CAF50; color: white; padding: 10px 20px; width: 100%; border: none; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <h2 style="text-align: center;">Enter Transaction Details</h2>
+    <form action="/predict" method="post">
+        <label>Step</label>
+        <input type="text" name="step" placeholder="e.g. 1" required>
+        
+        <label>Type (0-4)</label>
+        <input type="text" name="type" placeholder="e.g. 1 (PAYMENT)" required>
+        
+        <label>Amount</label>
+        <input type="text" name="amount" placeholder="e.g. 9839.64" required>
+        
+        <label>Old Balance Org</label>
+        <input type="text" name="oldbalanceOrg" placeholder="e.g. 170136.0" required>
+        
+        <label>New Balance Orig</label>
+        <input type="text" name="newbalanceOrig" placeholder="e.g. 160296.36" required>
+        
+        <label>Old Balance Dest</label>
+        <input type="text" name="oldbalanceDest" placeholder="e.g. 0.0" required>
+        
+        <label>New Balance Dest</label>
+        <input type="text" name="newbalanceDest" placeholder="e.g. 0.0" required>
+        
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
